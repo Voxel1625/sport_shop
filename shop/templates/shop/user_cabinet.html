@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>User Cabinet</title>
+    <link rel="stylesheet" href="{% static 'shop/css/styles.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="{% static 'shop/images/logo.ico' %}" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul id="mainmenu" class="mainmenu">
+                <li class="logo">
+                    <a href="/">
+                        <div class="logo"></div>
+                    </a>
+                </li>
+                <li class="site-title">
+                    <a href="/" style="color: orange; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); font-size: 24px; top: 5%; transform: translateX(-50%); position: absolute; left: 50%; font-weight: bold;">SPORT SHOP</a>
+                </li>
+                {% for m in menu %}
+                    {% if not forloop.last %}
+                        <li><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                    {% else %}
+                        <li class="last"><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if not user.is_authenticated %}
+                    <li class="float-right"><a href="{% url 'user_cabinet' %}">User Cabinet</a></li>
+                    <li class="float-right"><a href="{% url 'registration' %}" id="registrationBtn">Registration</a></li>
+                    <li class="float-right"><a href="{% url 'login' %}" id="loginBtn">Log in</a></li>
+                {% endif %}
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        <div class="content-text">
+            <h2>User Cabinet</h2>
+            <p>Welcome to your user cabinet! Here, you can manage your account settings and view your orders.</p>
+        </div>
+
+        <div id="footer">
+            <p>2023 Partial or complete copying of information from this site for distribution on other resources, including paper, is strictly prohibited.</p>
+        </div>
+        <div class="content">
+            <h2>Contact with us</h2>
+            <p>Email: sport.shop@gmail.com</p>
+            <p>Phone: +48537290059</p>
+            <p>Address: Wolska stret, Cracow, Poland</p>
+            <p>Feel free to reach out to us for any inquiries or feedback. We'll be happy to assist you!
+        </div>
+    </div>
+</body>
+</html>

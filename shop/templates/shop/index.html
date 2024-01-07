@@ -1,0 +1,39 @@
+
+{% extends 'shop/base.html' %}
+
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+<ul>
+
+    {% for p in posts %}
+    <li>
+        <h2>{{p.title}}</h2>
+        {% if p.photo %}
+            <p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
+            {% endif %}
+
+<p class="price">Price: {{ p.price }}</p>
+  <div class="product">
+    <button class="add-to-cart">Add to cart</button>
+  </div>
+
+  <div class="cart">
+
+    <ul class="cart-items">
+    </ul>
+  </div>
+
+        {% autoescape on %}
+        <p>{{p.content|linebreaks|truncatewords:300}}</p>
+        {% endautoescape %}
+        <div class="clear"></div>
+        <p class="link-read-post"><a href="{{ p.get_absolute_url }}" style="color: red;">See more</a></p>
+
+        <hr>
+    </li>
+
+    {% endfor %}
+</ul>
+{% endblock %}

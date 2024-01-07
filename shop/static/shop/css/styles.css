@@ -1,0 +1,263 @@
+/* Общие стили */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Стили для главного меню */
+
+.header {
+  background-color: #f4f4f4;
+  padding: 15px;
+}
+
+ul#mainmenu {
+  margin: 20;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul#mainmenu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul#mainmenu li a {
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+ul#mainmenu li.last,
+ul#mainmenu li:nth-last-child(2) {
+  margin-right: 20px;
+  float: right;
+}
+ul#mainmenu li.last {
+  margin-right: 20;
+  float: right;
+}
+
+/* Стили для левой панели */
+
+.left-chapters {
+  width: 15%;
+  padding-right: 12px;
+}
+
+ul#leftchapters li {
+  margin-bottom: 20px;
+}
+
+ul#leftchapters li a {
+  color: white;
+}
+
+ul#leftchapters li.selected {
+  font-weight: bold;
+}
+
+/* Стили для контента */
+
+.table-content {
+  width: 80%;
+}
+
+.content-text {
+  padding: 20px;
+}
+
+/* Стили для подвала */
+
+#footer {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff0000;
+  font-size: 18px;
+}
+
+/* Стили для формы регистрации */
+.registration-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registration-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.registration-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  background-color: #45a049;
+}
+
+
+
+.header {
+    background-color: black;
+}
+
+.left-chapters {
+    background-color: darkorange;
+}
+
+/* Общие стили */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+
+/* Стили для верхней панели */
+.top-panel {
+  color: white;
+}
+
+/* Стили для боковой панели */
+.sidebar {
+  color: white;
+}
+.site-title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+.float-right {
+    float: right !important;
+
+ul#mainmenu li:nth-last-child(3) {
+  margin-right: 20px;
+  float: right;
+}
+ul#mainmenu {
+  text-align: right;
+}
+
+ul#mainmenu li {
+  display: inline-block;
+}
+
+.site-title {
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+.red-button {
+  color: red;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.cart-items li {
+  margin-bottom: 5px;
+}
+
+.cart-total {
+  font-weight: bold;
+}
